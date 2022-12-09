@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F6F2CB"
+    android:gravity="center"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:id="@+id/layout_one"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <EditText
+            android:padding="10dp"
+            android:background="@drawable/edt_background"
+            android:layout_below="@+id/textToConvert"
+            android:id="@+id/edit_text"
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:layout_margin="10dp"
+            android:hint="Enter Any Language Text"
+            android:gravity="center"
+            android:inputType="text|textMultiLine" />
+
+    </LinearLayout>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:theme="@style/Theme.AppCompat.Light"
+        android:background="@drawable/btn_background"
+        android:layout_below="@id/layout_one"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/translateBtn"
+        android:text="Translate"
+        android:layout_margin="10dp"
+        />
+
+    <LinearLayout
+        android:layout_below="@+id/translateBtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <Spinner
+            android:id="@+id/langToConvert"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:drawable/btn_dropdown"
+            android:spinnerMode="dropdown"/>
+
+        <EditText
+            android:enabled="false"
+            android:background="@drawable/edt_background"
+            android:layout_margin="10dp"
+            android:id="@+id/convertedText"
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:gravity="center"
+            android:inputType="text|textMultiLine" />
+        <ProgressBar
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:visibility="gone"
+            android:id="@+id/pb"/>
+
+
+    </LinearLayout>
+
+
+</RelativeLayout>
